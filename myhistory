@@ -1,0 +1,142 @@
+log out
+logout
+clear
+ls
+ls-l
+ls
+ls -1
+ls -a
+ls -la
+mkdir wsql
+ls
+cd wsql
+ls
+cd ..
+cd wsql
+wget http://www.cals.arizona.edu/~anling/workshop/tset.fna
+ls
+cp tset.fna ../
+cd ..
+ls
+move tset.fna tset.fa
+mv tset.fna tset.fa
+mv tset.fa ./wsql/
+ls
+cd wsql
+ls
+rm tset.fa
+ls
+cd ..
+ls
+
+head tset.fna
+cd ..
+pwd
+logout
+ls
+pwd
+wsql http://www.cals.arizona.edu/~anling/workshop/tset.fna
+wget  http://www.cals.arizona.edu/~anling/workshop/tset.fna
+ls
+mkdir wsms
+ls
+mv tset.fna ./wsms/
+ls
+cd wsms
+ls
+vi tset.fna
+module avail
+module load blast
+blast
+blastn
+blastn -db/genome/Bacteria/NCBI_genomes_Bacteria -query tset.fna -out tset.txt
+ls
+blastn -db/genome/Bacteria/NCBI_genomes_Bacteria -query tset.fna -out tset.txt
+blastn -db /genome/Bacteria/NCBI_genomes_Bacteria -query tset.fna -out tset.txt
+ls
+vi tset.tst
+s
+ls
+vi tset.txt
+blastn -db /genome/Bacteria/NCBI_genomes_Bacteria -query tset.fna -out tset.txt -outfmt 7
+ls
+vi tset.txt
+blastn -db /genome/Bacteria/NCBI_genomes_Bacteria -query tset.fna -out tset.txt -num_threads 11 -outfmt7
+blastn -db /genome/Bacteria/NCBI_genomes_Bacteria -query test.fna -out test.txt -num_threads 11 -outfmt 7
+blastn -db /genome/Bacteria/NCBI_genomes_Bacteria -query tset.fna -out tset.txt -num_threads 11 -outfmt7
+ls
+vi template.csh
+logout
+cat t.f
+man ls
+grep -c ">" tset.fna
+head tset.fa
+ls
+ssh service1
+pwd
+ls
+logout
+ls
+cd wsms
+ls
+mv template.csh msws.csh
+ls
+qsub msws.csh
+vi template.csh
+wget http://www.cals.arizona.edu/~anling/workshop/template.csh
+ls
+vi template.csh
+pwd
+vi template.csh
+ls
+wget http://www.cals.arizona.edu/~anling/workshop/testset.fna
+ls
+qsub template.csh
+qstat -u qianwenluo
+ls
+vi template.csh
+ls
+vi tset.txt
+module load R
+R
+wget http://cals.arizona.edu/~anling/software/taec_linux.zip
+unzip taec_linux.zip
+module load R
+ls
+cd ./taec_rev
+R
+ls
+cd ..
+ls
+vi tset.txt
+vi testset.fna
+wget http://cals.arizona.edu/~anling/software/RAIDA_1.0.tar.gz
+R
+logout
+ls
+vi template.csh
+git clone git@github.com:qianwenluo/ABE-487.git
+cd
+mkdir ABE
+ls
+w
+man wc
+w | wc
+w | wc -1
+ls -l
+ls -lh
+wc -l
+date
+date; echo hello; date
+echo $HOME
+echo foo bar baz #comment
+man ssh
+ssh-keygen
+cd -
+cd -/.ssh/
+cd -/.ssh
+ls
+id
+cp /tmp/cuffdiff.txt .
+ftp.imicrobe.us
+ssh-keygen
