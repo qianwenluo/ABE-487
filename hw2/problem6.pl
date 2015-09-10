@@ -1,9 +1,8 @@
 #!/usr/bin/perl
-#file message.pl
 use strict;
 use warnings;
-print 'I am Qianwen, in biosystem engineering major\n';
-print "\n------\n";
-print "\t I am Qianwen, in biosystem engineering major\n";
+my $major = 'biosystems engineering';
+print 'I am Qianwen Luo, in $major major\n';
+print "\n";
+print "\t I am Qianwen Luo, in $major major\n";
 print "2+3=",2+3,"\n";
-
