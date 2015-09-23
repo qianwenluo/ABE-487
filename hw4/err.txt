@@ -1,0 +1,1 @@
+The divisor cannot be zero
