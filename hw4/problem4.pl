@@ -1,8 +1,9 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 #file:problem4.pl
 
 use strict;
 use warnings;
+use autodie;
 
 my $in = 'Perl_III.fastq.txt';
 
