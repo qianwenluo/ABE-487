@@ -1,7 +1,8 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 #file:problem1.pl
 use strict;
 use warnings;
+use autodie;
 
 my $x = shift;
 my $y = shift;
