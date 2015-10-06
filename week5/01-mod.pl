@@ -9,7 +9,7 @@ use autodie;
 my @numbers = @ARGV;
 
 if (@numbers  == 0){
-    die "Please procide a list of numbers.\n";
+    die "Please provide a list of numbers.\n";
 } 
 
 # declare an array for evens
