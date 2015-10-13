@@ -11,20 +11,14 @@ if (@numbers == 0) {
     die "Please provide a list of numbers.\n";
 }
 
-my @evens;
-my @odds;
 my $even_sum = 0;
 my $odd_sum = 0;
 
 foreach my $number (@numbers) {
     if ($number % 2 == 0) {
-        push @evens, $number;
         $even_sum += $number;
     }
-}
-foreach my $number(@numbers) {
-    if ($number % 2 == 1) {
-        push @odds, $number;
+    else {
         $odd_sum += $number;
     }
 }
