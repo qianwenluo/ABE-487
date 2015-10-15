@@ -41,9 +41,9 @@ printf "%-15s %10s\n", "Mer size ", $kmer_size;
 printf "%-15s %10s\n", "Number of kmers", $num_kmers;
 printf "%-15s %10s\n", "Unique kmers", $count;
 printf "%-15s %10s\n", "Num. singletons", $nsingle;
-
 if ($nsingle < $count) {
     my $i = 0;
+    say "Most abundant";
     foreach my $kmer (reverse sort {$kmers{$a} <=> $kmers{$b}} keys %kmers) {
         my $count = $kmers{$kmer};
         if ($count > 1) {
