@@ -3,6 +3,7 @@
 
 use strict;
 use warnings;
+use feature 'say';
 
 my $file = shift or die "Please provide a FASTA file.\n";
 
@@ -11,8 +12,12 @@ open my $fh, '<', $file;
 my $count = 0;
 while (my $line = <$fh>) {
 	chomp($line);
-		
-	$count ++;
-	printf "%6d: %s\n", 
-	print "Found ", $count, " sequences\n";
+	#if(substr ($line,0,1) eq '>'){
+
+    if ($line =~ /^>(.+)/) {
+        $count++;
+        say "$count: $1";
+	}
+
 }
+print "Found $count sequences.\n";
