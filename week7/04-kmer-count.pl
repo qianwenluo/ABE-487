@@ -44,12 +44,13 @@ printf "%-15s %10s\n", "Num. singletons", $nsingle;
 if ($nsingle < $count) {
     my $i = 0;
     say "Most abundant";
-    foreach my $kmer (reverse sort {$kmers{$a} <=> $kmers{$b}} keys %kmers) {
+    foreach my $kmer (
+        sort {$kmers{$b} <=> $kmers{$a} || $a cmp $b } keys %kmers
+    ) {
         my $count = $kmers{$kmer};
-        if ($count > 1) {
-            $i++;
-            last if $i >= 10;
-            say $kmer, ": ", $count;
-        }
+        last if $count <= 1;
+        $i++;
+        last if $i > 10;
+        say $kmer, ": ", $count;
     }
 }
