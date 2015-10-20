@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use feature 'say';
 
-my $line = shift or die " Please provide a word or phrase.\n";
+my $line = shift or die "Please provide a word or phrase.\n";
 
 chomp ($line);
 $line =~ s/[^A-Za-z0-9]//g;
