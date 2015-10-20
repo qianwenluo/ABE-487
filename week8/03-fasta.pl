@@ -20,4 +20,4 @@ while (my $line = <$fh>) {
 	}
 
 }
-print "Found $count sequences.\n";
+printf "Found $count sequence%s.\n", ($count == 1) ?  '' : 's';
