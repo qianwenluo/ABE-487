@@ -3,6 +3,7 @@
 
 use strict;
 use warnings;
+use autodie;
 use feature 'say';
 
 my $file = shift or die "Please provide a FASTA file.\n";

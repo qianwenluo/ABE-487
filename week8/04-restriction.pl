@@ -3,6 +3,7 @@
 
 use strict;
 use warnings;
+use autodie;
 
 my $file = shift or die "Please provide a sequence or file.\n";
 
