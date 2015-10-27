@@ -6,21 +6,31 @@ use autodie;
 use feature 'say';
 use Getopt::Long;
 use Pod::Usage;
+use Data::Dumper;
 
 main();
 
 # --------------------------------------------------
 sub main {
     my %args = get_args();
-
+   
     if ($args{'help'} || $args{'man_page'}) {
         pod2usage({
             -exitval => 0,
             -verbose => $args{'man_page'} ? 2 : 1
         });
     }; 
+    #say Dumper (\%args);
+    #say "OK";
+    my $program = $args{'program'} or pod2usage('Missing program');
+    my $args = $args{'argument'} or pod2usage('Missing argument');    
 
-    say "OK";
+    if($program eq 'hello') {
+        hello($args{'argument'});
+    }
+    elsif($program eq 'rc') {
+        rc($args{'argument'});
+    }
 }
 
 # --------------------------------------------------
@@ -28,13 +38,27 @@ sub get_args {
     my %args;
     GetOptions(
         \%args,
+        'program=s',
+        'argument=s',
         'help',
-        'man',
+        'man_page',
     ) or pod2usage(2);
 
     return %args;
 }
 
+# -------------------------------------------------
+sub hello {
+    my $name = shift;
+    say "Hello, ", $name;
+}
+
+sub rc {
+    my $seq = shift;
+    my $revcomp = reverse($seq);
+    $revcomp =~ tr/ACGTacgt/TGCAtgca/;
+    say $revcomp
+}
 __END__
 
 # --------------------------------------------------
@@ -47,12 +71,17 @@ __END__
 
 =head1 SYNOPSIS
 
-  01-subs.pl 
+  01-subs.pl -p hello -a Tucson
+  
+  01-subs.pl -p rc -a GAGAGAGAGAGTTTTTTTTT
+
 
 Options:
 
-  --help   Show brief help and exit
-  --man    Show full documentation
+  --program   The thing to do
+  --argument  The argument to the thing
+  --help      Show brief help and exit
+  --man       Show full documentation
 
 =head1 DESCRIPTION
 
