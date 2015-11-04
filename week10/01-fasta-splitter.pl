@@ -33,12 +33,13 @@ sub main {
         make_path($out_dir);
     }
    
-    my $writer;
     for my $file (@ARGV) {
+        say "file ($file)";
         my $in = Bio::SeqIO->new(-file => $file,
                                  -format => 'Fasta');
         my $count;
         my $filenum = 0;
+        my $writer;
         while ( my $seq = $in->next_seq() ) {
             $count++;
             if (!$writer || $count == $max) {
@@ -49,7 +50,7 @@ sub main {
                                           -format => 'Fasta');
             }   
  
-            say join ": ", $count, $seq->id;
+            #say join ": ", $count, $seq->id;
             $writer->write_seq($seq);
         }
     }
