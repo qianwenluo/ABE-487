@@ -21,7 +21,7 @@ sub main {
             -verbose => $args{'man_page'} ? 2 : 1
         });
     } 
-
+    my $file = shift @ARGV or pod2usage('Missing a file');
     for my $file (@ARGV) {
         # say "file ($file)";
         my $seqio_object = Bio::SeqIO->new(-file => $file);
