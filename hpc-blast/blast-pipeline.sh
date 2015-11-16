@@ -27,5 +27,5 @@ while read FILE; do
     #JOB_ID2=`qsub -v SCRIPT_DIR,BLAST_OUT_DIR,FILE -W depend=afterany:$JOB_ID1 -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_SPLIT_FILES $SCRIPT_DIR/run-parse-blast.sh`
     #JOB_ID2=`qsub -v SCRIPT_DIR,BLAST_OUT_DIR,FILE  -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_SPLIT_FILES $SCRIPT_DIR/run-parse-blast.sh`
     # JOB_ID3=`qsub -v SCRIPT_DIR,BLAST_OUT_DIR,FILE -W depend=afterany:$JOB_ID2 -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_SPLIT_FILES $SCRIPT_DIR/final-step.sh`
-    JOB_ID3=`qsub -v SCRIPT_DIR,BLAST_OUT_DIR,FILE  -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_SPLIT_FILES $SCRIPT_DIR/final-step.sh`
+    JOB_ID3=`qsub -v SCRIPT_DIR,BLAST_OUT_DIR,FILE  -e "$STDERR_DIR" -o "$STDOUT_DIR" $SCRIPT_DIR/final-step.sh`
 done < $FILES_LIST

@@ -12,5 +12,7 @@
 #PBS -m bea
 
 cd $BLAST_OUT_DIR
-BLOUT="$BLAST_OUT_DIR/$FILE.${PBS_ARRAY_INDEX}.blastout"
-cat $BLOUT.parsed >> $FILE
+#BLOUT="$BLAST_OUT_DIR/$FILE.${PBS_ARRAY_INDEX}.blastout"
+#cat $BLOUT.parsed >> $FILE
+
+cat $FILE.*.parsed > $FILE.all.parsed
