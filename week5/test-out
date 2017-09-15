@@ -1,0 +1,48 @@
+ok 1 - 01-mod.pl
+ok 2 - 01-mod.pl 1 2 3 4 5 6 7
+ok 3 - 01-mod.pl 1 3 5 7
+ok 4 - 02-mod-sort-sum.pl
+ok 5 - 02-mod-sort-sum.pl 1 2 3 4 5 6 7
+ok 6 - 03-sort.pl
+ok 7 - 03-sort.pl 98 2 36 74 27 33
+ok 8 - 04-array-ops.pl
+ok 9 - 05-string-sort.pl
+ok 10 - 05-string-sort.pl ATGCCCGGCCCGGC GCGTGCTAGCAATACGATAAACCGG ATATATATCGAT ATGGGCCC
+ok 11 - 06-string-sort-len.pl
+ok 12 - 06-string-sort-len.pl AACT TACCTAG TTACAG
+ok 13 - 07-gc.pl
+not ok 14 - 07-gc.pl ATGGGCCC atgcccggcccggc
+#   Failed test '07-gc.pl ATGGGCCC atgcccggcccggc'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '10'
+#     expected: '0'
+# Different in line: 1: got (------), expect (-------)
+# 
+# 2: got (Seq : ATGGGCCC), expect (Seq   : ATGGGCCC)
+# 
+# 3: got (Length : 8), expect (Length: 8)
+# 
+# 4: got (#GC : 6), expect (#GC   : 6)
+# 
+# 5: got (%GC : 75), expect (%GC   : 75)
+# 
+# 6: got (------), expect (-------)
+# 
+# 7: got (Seq : atgcccggcccggc), expect (Seq   : atgcccggcccggc)
+# 
+# 8: got (Length : 14), expect (Length: 14)
+# 
+# 9: got (#GC : 12), expect (#GC   : 12)
+# 
+# 10: got (%GC : 85.7142857142857), expect (%GC   : 85.7142857142857)
+Skipping 08-snps.pl (does not exist)
+Skipping 08-snps.pl (does not exist)
+Skipping 08-snps.pl (does not exist)
+Skipping 08-snps.pl (does not exist)
+Skipping 08-snps.pl (does not exist)
+Skipping 09-extra-credit.pl (does not exist)
+Skipping 09-extra-credit.pl (does not exist)
+1..14
+The plan was already output at /usr/local/lib/perl5/5.22.0/Test/Builder.pm line 2510.
+1..14
+# Looks like you failed 1 test of 14.
